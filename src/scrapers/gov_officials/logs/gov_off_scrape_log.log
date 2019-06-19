@@ -1,0 +1,160 @@
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] and content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] and content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] and content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] and content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] and content.find(value['unused']['tag'], value['unused']['attribute']):
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused']:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused']:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused']:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused']:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused']:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] is not None:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] is not None:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] is not None:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] is not None:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    if value['unused'] is not None:
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    print(value['unused'])
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    print(value['unused'])
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    print(value['unused'])
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    print(value['unused'])
+KeyError: 'unused'
+ERROR:-Error when processing data: 'unused' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 135, in process_data
+    print(value['unused'])
+KeyError: 'unused'
+ERROR:-Error when processing data: 'list' object has no attribute 'strip' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 142, in gather_data
+    content = self.process_data(content, key, site_key)
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 170, in process_data
+    content = content.strip(" \n").replace(
+AttributeError: 'list' object has no attribute 'strip'
+ERROR:-Error when processing data: 'list' object has no attribute 'strip' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 142, in gather_data
+    content = self.process_data(content, key, site_key)
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 170, in process_data
+    content = content.strip(" \n").replace(
+AttributeError: 'list' object has no attribute 'strip'
+ERROR:-Error when processing data: 'list' object has no attribute 'strip' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 142, in gather_data
+    content = self.process_data(content, key, site_key)
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 170, in process_data
+    content = content.strip(" \n").replace(
+AttributeError: 'list' object has no attribute 'strip'
+ERROR:-Error when processing data: 'list' object has no attribute 'strip' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 142, in gather_data
+    content = self.process_data(content, key, site_key)
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 170, in process_data
+    content = content.strip(" \n").replace(
+AttributeError: 'list' object has no attribute 'strip'
+ERROR:-Error when processing data: 'list' object has no attribute 'strip' 
+Traceback (most recent call last):
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 142, in gather_data
+    content = self.process_data(content, key, site_key)
+  File "d:\Coding\Bitko\scrapers\src\scrapers\gov_officials\base.py", line 170, in process_data
+    content = content.strip(" \n").replace(
+AttributeError: 'list' object has no attribute 'strip'

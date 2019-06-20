@@ -1,6 +1,13 @@
 # author: long nguyen (nguyenhailong253@gmail.com)
 
+import re
+import json
+import time
+import requests
+import psycopg2
+from .utils import ROOT, PARENTS, CHILDREN, ATTRS_TAGS
 from src.base.base import Scraper
+from bs4 import BeautifulSoup
 
 
 class NewsScraperBase(Scraper):
@@ -14,21 +21,57 @@ class NewsScraperBase(Scraper):
     # +  -  -  - REQUESTS -  -  - +
 
     def request_url(self, url):
-        pass
+        ''' Request URL and return soup object '''
+
+        try:
+            html_page = requests.get(url)
+            status = html_page.status_code
+            print("status code: {}\n".format(status))
+
+            # check status code
+            if 300 <= status < 400:
+                print("-- Being redirected, code: {} \n".format(status))
+            elif status == 200:
+                soup = BeautifulSoup(html_page.text, "html.parser")
+                return soup
+
+            return None
+
+        except Exception as e:
+            print("-Error while requesting URL: {} \n".format(e))
+            return None
 
     # +  -  -  - FIND HTML TAGS -  -  - +
 
-    def get_parent_div(self, soup):
-        pass
+    def get_list_divs(self, soup, tag, attribute):
+        ''' Return list of divs using tags and classnames from utils '''
 
-    def get_children_list(self):
-        pass
+        if tag in ATTRS_TAGS:
+            containers = soup.find_all(tag)
+        else:
+            containers = soup.find_all(tag, attribute)
 
-    # +  -  -  - PROCESSING DATA -  -  - +
+        if containers:
+            return containers
+        return []
 
-    def initialize_data(self):
-        ''' Initialize 1 obj data with necessary keys and empty values '''
-        pass
+    def get_single_div(self, soup, tag, attribute):
+        ''' Return single div using tags and classnames from utils '''
 
-    def get_text_data(self):
-        pass
+        if tag in ATTRS_TAGS:
+            item = soup.find(tag)
+        else:
+            item = soup.find(tag, attribute)
+
+        if item:
+            return item
+        return None
+
+    def get_attributes(self, div, attrs):
+        ''' Return single value from attribute given '''
+
+        attribute = div.get(attrs)
+
+        if attribute:
+            return attribute
+        return None

@@ -29,24 +29,19 @@ CREATE TABLE IF NOT EXISTS news.test_zingnews(
   added_id      SERIAL,
   id            uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
   src_id        VARCHAR,
-  title         VARCHAR,
-  summary       TEXT,
-  article_body  TEXT,
+  article_type  VARCHAR,
+  topic_id      VARCHAR,
   url           VARCHAR,
+  img_src       VARCHAR,
+  title         VARCHAR,
   publish_time  VARCHAR,
   publish_date  VARCHAR,
   category      VARCHAR,
   author        VARCHAR,
-  author_url    VARCHAR,
-  article_type  VARCHAR,
-  topic_id      VARCHAR,
-  like_count    SMALLINT,
-  dislike_count SMALLINT,
-  rating_count  SMALLINT,
-  viral_count   SMALLINT,
-  comment_count SMALLINT,
-  img_src       VARCHAR,
+  article_body  TEXT,
   tags          VARCHAR,
+  summary       TEXT,
+  extra         JSONB,
   posted_at     TIMESTAMPTZ,  
   created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -59,3 +54,12 @@ WITH NO DATA;
 -- truncate tables
 TRUNCATE TABLE name_entity.test_gov_officials RESTART IDENTITY;
 TRUNCATE TABLE news.test_zingnews RESTART IDENTITY;
+
+-- drop table
+DROP TABLE IF EXISTS name_entity.test_gov_officials CASCADE;
+DROP TABLE IF EXISTS news.test_zingnews CASCADE;
+
+-- grant privileges
+GRANT ALL PRIVILEGES ON SCHEMA news, name_entity TO bitko_admin;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA news, name_entity TO bitko_admin;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA news, name_entity TO bitko_admin;

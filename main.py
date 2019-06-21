@@ -18,7 +18,7 @@ def main():
     # s.run()
     start = time.time()
 
-    p = multiprocessing.Pool(processes=4)
+    p = multiprocessing.Pool(processes=1)
     p.map(run, CATEGORIES)
     p.close()
     p.join()

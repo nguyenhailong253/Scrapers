@@ -63,3 +63,6 @@ DROP TABLE IF EXISTS news.test_zingnews CASCADE;
 GRANT ALL PRIVILEGES ON SCHEMA news, name_entity TO bitko_admin;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA news, name_entity TO bitko_admin;
 GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA news, name_entity TO bitko_admin;
+
+-- create index
+CREATE INDEX idx_src_id ON news.test_zingnews(src_id);

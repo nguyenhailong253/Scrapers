@@ -214,8 +214,8 @@ class ZingNewsScraper(NewsScraperBase):
                             else:
                                 self.scrape_extras(key)
                     else:
-                        self.log.debug(
-                            "--- NoneType: {}, {}\n".format(key, value[TAG]))
+                        # self.log.debug(
+                        #     "--- NoneType: {}, {}\n".format(key, value[TAG]))
                         self.scrape_extras(key)
                 else:
                     self.scrape_attrs_tags(div, key, value)
@@ -238,7 +238,8 @@ class ZingNewsScraper(NewsScraperBase):
             # get all children divs
             divs = self.get_list_divs(
                 soup, THUMBNAIL_SPECS[PARENTS][TAG], THUMBNAIL_SPECS[PARENTS][ATTRS])
-            self.log.info("NUMBER OF DIVS THIS PAGE: {} AT {}\n".format(len(divs), url))
+            self.log.info(
+                "NUMBER OF DIVS THIS PAGE: {} AT {}\n".format(len(divs), url))
 
             # if empty [], finish this category
             if not divs:
@@ -262,9 +263,9 @@ class ZingNewsScraper(NewsScraperBase):
                     # if already_scraped >= 25:
                     #     self.done = True
                     #     break
-                    continue
-                    # self.done = True
-                    # break
+                    # continue
+                    self.done = True
+                    break
 
                 # request url, get single div for full article
                 soup = self.request_url(self.data['url'])
@@ -300,7 +301,7 @@ class ZingNewsScraper(NewsScraperBase):
 
         self.log.info("--- START: {} AT {}\n".format(category, self.NOW))
         print("--- START: {} AT {}\n".format(category, self.NOW))
-        page_num = 16
+        page_num = 1
 
         while not self.done and page_num <= 50:
             self.scrape_pages(category, page_num)

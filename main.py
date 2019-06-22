@@ -18,7 +18,7 @@ def main():
     # s.run()
     start = time.time()
 
-    p = multiprocessing.Pool(processes=1)
+    p = multiprocessing.Pool(processes=4)
     p.map(run, CATEGORIES)
     p.close()
     p.join()
@@ -26,7 +26,6 @@ def main():
     end = time.time() - start
     print("\nFinished at: {}\n".format(
         datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
-    print("Finished scraping after {}s".format(end-start))
 
 
 if __name__ == "__main__":

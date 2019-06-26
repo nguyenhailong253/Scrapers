@@ -5,10 +5,11 @@ import json
 import time
 import requests
 import psycopg2
-from .utils import ROOT, PARENTS, CHILDREN, ATTRS_TAGS
 from src.base.base import Scraper
 from datetime import datetime
 from bs4 import BeautifulSoup
+
+ATTRS_TAGS = ['a', 'img']
 
 
 class NewsScraperBase(Scraper):
@@ -45,7 +46,7 @@ class NewsScraperBase(Scraper):
                 if attempt >= 3:
                     done = True
                 attempt += 1
-                time.sleep(0.5)
+                time.sleep(0.2)
         return soup
 
     # +  -  -  - FIND HTML TAGS -  -  - +

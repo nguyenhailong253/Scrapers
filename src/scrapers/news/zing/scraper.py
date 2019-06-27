@@ -14,7 +14,6 @@ class ZingNewsScraper(ZingScraperBase):
     def __init__(self):
         super().__init__()
         self.done = False
-        self.is_latest_news = True
         self.total_news = 0
         self.set_up_logs()
 
@@ -55,7 +54,7 @@ class ZingNewsScraper(ZingScraperBase):
                 print("-- Error when scraping: {}\n".format(e))
 
     def scrape_div(self, div):
-        ''' Scrape content of a div '''
+        ''' Scrape content of a div, return True if scraped successfully '''
 
         self.initialize_data()
         # scrape general info of that div
@@ -79,14 +78,16 @@ class ZingNewsScraper(ZingScraperBase):
                 self.total_news += 1
                 self.log.info(" {}: {}\n".format(
                     self.data['src_id'], self.data['url']))
+                return True
             except Exception as e:
                 # if existed, skip
                 self.log.debug(
                     "--- Already scraped: {}\n{}\n".format(self.data['url'], e))
-                self.is_latest_news = False
+                return False
         else:
             self.log.exception(
                 "--- Cannot request url {}\n".format(self.data['url']))
+            return False
 
     def scrape_page(self, category, page_num):
         ''' Get list of article divs and call scrape each div '''
@@ -95,6 +96,7 @@ class ZingNewsScraper(ZingScraperBase):
         url = self.format_page_url(category, page_num)
         # request url
         soup = self.request_url(url)
+        already_scraped = 0
 
         # if request successfully
         if soup:
@@ -111,10 +113,13 @@ class ZingNewsScraper(ZingScraperBase):
 
             # loop each children div
             for div in divs:
-                if self.is_latest_news:
-                    self.scrape_div(div)
-                else:
-                    self.done = True
+                has_been_scraped = self.scrape_div(div)
+
+                if not has_been_scraped:
+                    already_scraped += 1
+                    if already_scraped >= 25:
+                        self.done = True
+                        break
 
         else:
             print("-- Cannot request url: {}\n".format(url))

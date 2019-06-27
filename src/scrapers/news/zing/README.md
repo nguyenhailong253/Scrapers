@@ -9,12 +9,6 @@
 
 # Functions
 ## Base
-- request_url(url): Request URL and return soup object, try 3 times if fails
-- get_list_divs(soup, tag, attribute): Return list of divs using tags and classnames from utils
-- get_single_div(soup, tag, attribute): Return single div using tags and classnames from utils
-- get_attributes(div, attrs): Return single value from attribute given
-
-## Scraper
 - set_up_logs(): Create log file and set formatter
 - get_categories_dict(): Get dict with category name as key, url as value
 - format_article_url(tail): Format URL with 2 components: root and tail
@@ -27,6 +21,8 @@
 - process_extras(): Convert extras to json and call process time to cacl posted_at
 - save_news(values): Insert data to DB 
 - check_news_existed(news_id): Query if news already existed
+
+## Scraper
 - scrape_attrs_tags(div, key, value): Process content of html tag a, img, or None
 - scrape_extras(key, result): Check if key in EXTRA_KEY and assign result to value based on key
 - scrape(div, html_attrs): Scrape article details, given its html div and set of attributes
@@ -36,6 +32,10 @@
 # Rules
 - Zing organizes their news chronologically: latest on first page, oldest on the last
 - Some categories only have up to page 5 (like Politics), but most have up to page 50
+- Sometimes Zing puts popular articles on top (usually not more than 10 but sometimes could be more), which are not necessary the latest ones (could be yesterday or within this week), so I have added extra logic to check if more than 25 articles already scraped on the first page, then we have scraped all the latest one.
+- Pages have different number of articles, some might have 40, others could have 120
+
+- Video-type article has no author
 
 # Most common article type
 - text: only text

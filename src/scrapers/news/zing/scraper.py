@@ -143,5 +143,4 @@ class ZingNewsScraper(ZingScraperBase):
         self.log.info(
             "--- FINISHED: {} {} news AT {}\n".format(self.total_news, category, self.NOW))
 
-# TODO:
-# change news to lds_news
+

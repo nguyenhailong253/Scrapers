@@ -73,9 +73,7 @@ class ZingNewsScraper(ZingScraperBase):
 
             # send details to db
             values = list(self.data.values())
-            for val in values:
-                print(val)
-            print("\n\n")
+            
             try:
                 self.save_news(values)
                 self.total_news += 1

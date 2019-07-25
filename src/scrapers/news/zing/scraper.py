@@ -118,7 +118,7 @@ class ZingNewsScraper(ZingScraperBase):
 
                 if not has_been_scraped:
                     already_scraped += 1
-                    if already_scraped >= 20:
+                    if already_scraped >= 40:
                         self.done = True
                         break
 

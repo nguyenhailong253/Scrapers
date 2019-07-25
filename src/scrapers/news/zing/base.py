@@ -88,7 +88,6 @@ class ZingScraperBase(NewsScraperBase):
             self.data[key] = NULL
 
         self.data[POSTED_AT] = MISSING
-        print(self.data)
 
     def process_article_type(self, article_type):
         ''' Get second item in list of article type and strip 'type-' '''
